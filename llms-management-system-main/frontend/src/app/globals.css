@@ -1,0 +1,240 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Semantic and Brand tokens mapped to Tailwind colors */
+  --color-brand: var(--brand);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+
+  /* Sidebar tokens mapped to Tailwind colors */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Chart tokens mapped to Tailwind colors */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Fonts */
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Radii */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Palette B (Navy) - Default Light */
+:root,
+:root[data-palette="navy"] {
+  --radius: 0.5rem;
+  --background: #F4F6F8;
+  --foreground: #071739;
+  --card: #FFFFFF;
+  --card-foreground: #071739;
+  --popover: #FFFFFF;
+  --popover-foreground: #071739;
+  --primary: #071739;
+  --primary-foreground: #FFFFFF;
+  --secondary: #E6EBEF;
+  --secondary-foreground: #071739;
+  --muted: #E6EBEF;
+  --muted-foreground: #4B6382;
+  --accent: #F1E7D8;
+  --accent-foreground: #071739;
+  --brand: #A68868;
+  --border: #CDD5DB;
+  --input: #CDD5DB;
+  --ring: #A68868;
+  --destructive: #B42318;
+  --destructive-foreground: #FFFFFF;
+  --success: #1F7A5A;
+  --warning: #B7791F;
+  --sidebar: #071739;
+  --sidebar-foreground: #CDD5DB;
+  --sidebar-accent: #173060;
+  --sidebar-accent-foreground: #CDD5DB;
+  --sidebar-border: #14264D;
+  --sidebar-primary: #071739;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-ring: #A68868;
+  --chart-1: #4B6382;
+  --chart-2: #A68868;
+  --chart-3: #A4B5C4;
+  --chart-4: #071739;
+  --chart-5: #E3C39D;
+}
+
+/* Palette B (Navy) - Dark */
+.dark,
+:root[data-palette="navy"].dark {
+  --radius: 0.5rem;
+  --background: #050E24;
+  --foreground: #E8EDF2;
+  --card: #0A1A3C;
+  --card-foreground: #E8EDF2;
+  --popover: #0A1A3C;
+  --popover-foreground: #E8EDF2;
+  --primary: #E3C39D;
+  --primary-foreground: #071739;
+  --secondary: #12264D;
+  --secondary-foreground: #E8EDF2;
+  --muted: #12264D;
+  --muted-foreground: #A4B5C4;
+  --accent: #14284F;
+  --accent-foreground: #E8EDF2;
+  --brand: #A68868;
+  --border: #1B2F57;
+  --input: #1B2F57;
+  --ring: #A68868;
+  --destructive: #F04438;
+  --destructive-foreground: #FFFFFF;
+  --success: #3FB68B;
+  --warning: #E0A93B;
+  --sidebar: #040B1D;
+  --sidebar-foreground: #A4B5C4;
+  --sidebar-accent: #0F2250;
+  --sidebar-accent-foreground: #A4B5C4;
+  --sidebar-border: #0F1D3F;
+  --sidebar-primary: #E3C39D;
+  --sidebar-primary-foreground: #071739;
+  --sidebar-ring: #A68868;
+  --chart-1: #A4B5C4;
+  --chart-2: #E3C39D;
+  --chart-3: #4B6382;
+  --chart-4: #A68868;
+  --chart-5: #CDD5DB;
+}
+
+/* Palette A (Cream) - Light */
+:root[data-palette="cream"] {
+  --radius: 0.5rem;
+  --background: #F4EDDC;
+  --foreground: #1B2B26;
+  --card: #FBF7EC;
+  --card-foreground: #1B2B26;
+  --popover: #FBF7EC;
+  --popover-foreground: #1B2B26;
+  --primary: #1E4035;
+  --primary-foreground: #F4EDDC;
+  --secondary: #E8DFC8;
+  --secondary-foreground: #1B2B26;
+  --muted: #E8DFC8;
+  --muted-foreground: #5B6B64;
+  --accent: #E4E8D8;
+  --accent-foreground: #1E4035;
+  --brand: #C8412B;
+  --border: #D9CFB5;
+  --input: #D9CFB5;
+  --ring: #C8412B;
+  --destructive: #A61B1B;
+  --destructive-foreground: #FFFFFF;
+  --success: #2F7D4F;
+  --warning: #B7791F;
+  --sidebar: #1E4035;
+  --sidebar-foreground: #E9E2CF;
+  --sidebar-accent: #2C5A4B;
+  --sidebar-accent-foreground: #E9E2CF;
+  --sidebar-border: #2A4D41;
+  --sidebar-primary: #1E4035;
+  --sidebar-primary-foreground: #F4EDDC;
+  --sidebar-ring: #C8412B;
+  --chart-1: #1E4035;
+  --chart-2: #C8412B;
+  --chart-3: #6E9C88;
+  --chart-4: #D9A441;
+  --chart-5: #8C7B5A;
+}
+
+/* Palette A (Cream) - Dark */
+:root[data-palette="cream"].dark {
+  --radius: 0.5rem;
+  --background: #0F1B17;
+  --foreground: #F4EDDC;
+  --card: #15251F;
+  --card-foreground: #F4EDDC;
+  --popover: #15251F;
+  --popover-foreground: #F4EDDC;
+  --primary: #F4EDDC;
+  --primary-foreground: #14302A;
+  --secondary: #1E3129;
+  --secondary-foreground: #F4EDDC;
+  --muted: #1E3129;
+  --muted-foreground: #A9B5AC;
+  --accent: #1F3A31;
+  --accent-foreground: #F4EDDC;
+  --brand: #E5604A;
+  --border: #24382F;
+  --input: #24382F;
+  --ring: #E5604A;
+  --destructive: #F2665B;
+  --destructive-foreground: #0F1B17;
+  --success: #4CB27A;
+  --warning: #E0A93B;
+  --sidebar: #0B1613;
+  --sidebar-foreground: #C9D1C6;
+  --sidebar-accent: #1A3028;
+  --sidebar-accent-foreground: #C9D1C6;
+  --sidebar-border: #1A2B24;
+  --sidebar-primary: #F4EDDC;
+  --sidebar-primary-foreground: #14302A;
+  --sidebar-ring: #E5604A;
+  --chart-1: #6E9C88;
+  --chart-2: #E5604A;
+  --chart-3: #D9C9A0;
+  --chart-4: #D9A441;
+  --chart-5: #8FB5A3;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
+}
+
+/* Note on tabular-nums utility:
+   Use the `tabular-nums` CSS/Tailwind utility class on all numeric data, stat cards,
+   patient codes, IDs, and data table numerical cells for aligned, proportional figures.
+*/

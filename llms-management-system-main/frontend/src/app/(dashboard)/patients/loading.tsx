@@ -1,0 +1,26 @@
+import { Skeleton } from "@/components/ui/skeleton";
+import { TableSkeleton } from "@/components/shared/TableSkeleton";
+
+export default function PatientsLoading() {
+  return (
+    <div className="space-y-6">
+      {/* Page Header skeleton */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="space-y-1.5">
+          <Skeleton className="h-7 w-32" />
+          <Skeleton className="h-4 w-64" />
+        </div>
+        <Skeleton className="h-9 w-36 rounded-md" />
+      </div>
+
+      {/* Search and filters toolbar skeleton */}
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+        <Skeleton className="h-9 w-full sm:w-72 rounded-md" />
+        <Skeleton className="h-9 w-32 rounded-md" />
+      </div>
+
+      {/* Table skeleton */}
+      <TableSkeleton rowCount={6} columnCount={7} />
+    </div>
+  );
+}
